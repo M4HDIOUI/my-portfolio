@@ -1,103 +1,264 @@
-import Image from "next/image";
+import Link from "next/link"
+import { Github, Linkedin, Mail } from "lucide-react"
+import ProjectCard from "@/components/project-card"
+import SkillBadge from "@/components/skill-badge"
+import ExperienceItem from "@/components/experience-item"
+import { ThemeToggle } from "@/components/theme-toggle"
+import styles from "./page.module.css"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <div className={styles.headerContent}>
+          <div className={styles.logo}>
+            <Link href="/">Mahdioui Omar</Link>
+          </div>
+          <nav className={styles.nav}>
+            <Link href="#about" className={styles.navLink}>
+              About
+            </Link>
+            <Link href="#skills" className={styles.navLink}>
+              Skills
+            </Link>
+            <Link href="#projects" className={styles.navLink}>
+              Projects
+            </Link>
+            <Link href="#experience" className={styles.navLink}>
+              Experience
+            </Link>
+            <Link href="#contact" className={styles.navLink}>
+              Contact
+            </Link>
+          </nav>
+          <div className={styles.socialLinks}>
+            <ThemeToggle />
+            <Link
+              href="https://github.com/M4HDIOUI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconLink}
+            >
+              <Github className={styles.icon} />
+              <span className={styles.srOnly}>GitHub</span>
+            </Link>
+            <Link
+              href="https://linkedin.com/in/omar-mahdioui-03611a279/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconLink}
+            >
+              <Linkedin className={styles.icon} />
+              <span className={styles.srOnly}>LinkedIn</span>
+            </Link>
+          </div>
         </div>
+      </header>
+
+      <main className={styles.main}>
+        {/* Hero Section */}
+        <section className={styles.hero}>
+          <div className={styles.profileImage}>
+            <img src="/placeholder.svg?height=128&width=128" alt="Profile" />
+          </div>
+          <h1 className={styles.heroTitle}>Mahdioui Omar</h1>
+          <h2 className={styles.heroSubtitle}>Software Engineer & Full-Stack Developer</h2>
+          <p className={styles.heroText}>
+          Full-stack developer with a strong foundation from 1337, skilled in React, Next.js, and Django. I build fast, accessible web apps and enjoy solving real-world problems with clean, scalable code.
+          </p>
+          <div className={styles.buttonGroup}>
+            <Link href="#contact" className={`${styles.button} ${styles.primaryButton}`}>
+              Get in Touch
+            </Link>
+            <Link href="#projects" className={`${styles.button} ${styles.outlineButton}`}>
+              View Projects
+            </Link>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className={styles.section}>
+          <h2 className={styles.sectionTitle}>About Me</h2>
+          <div className={styles.aboutGrid}>
+            <div className={styles.aboutText}>
+              <p className={styles.paragraph}>
+              I’m a developer trained at 1337, where I learned through real-world projects and peer-based challenges. This experience shaped my problem-solving mindset and adaptability.
+              </p>
+              <p className={styles.paragraph}>
+              My focus is on building clean, reliable, and user-centered web applications. I value code quality, performance, and accessibility in everything I create.
+              </p>
+              <p className={styles.paragraph}>
+              I'm always exploring new technologies and enjoy turning ideas into practical digital solutions. I'm eager to join a team where I can grow, contribute, and build meaningful products.
+              </p>
+            </div>
+            <div className={styles.aboutImage}>
+              <img src="/placeholder.svg?height=300&width=400" alt="About Me" />
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className={styles.section}>
+          <h2 className={styles.sectionTitle}>Skills & Technologies</h2>
+          <div className={styles.skillsGrid}>
+            <SkillBadge name="JavaScript" />
+            <SkillBadge name="TypeScript" />
+            <SkillBadge name="React" />
+            <SkillBadge name="Next.js" />
+            <SkillBadge name="Node.js" />
+            <SkillBadge name="Express" />
+            <SkillBadge name="MongoDB" />
+            <SkillBadge name="PostgreSQL" />
+            <SkillBadge name="Gjango" />
+            <SkillBadge name="REST API" />
+            <SkillBadge name="CSS" />
+            <SkillBadge name="Git" />
+            <SkillBadge name="Docker" />
+            <SkillBadge name="C" />
+            <SkillBadge name="C++" />
+            <SkillBadge name="java" />
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className={styles.section}>
+          <h2 className={styles.sectionTitle}>Featured Projects</h2>
+          <div className={styles.projectsGrid}>
+          <ProjectCard
+            title="Online Pong Game"
+            description="Full-stack pong game built with React frontend and Django backend. Features user authentication, chat, and real-time notifications."
+            technologies={["React", "Django", "WebSocket", "JWT"]}
+            imageUrl="/pong-game.svg?height=200&width=300"
+            repoUrl="https://github.com/USM4/ft_transcendence"
+          />
+          <ProjectCard
+            title="Contact App"
+            description="Next.js contact management app with CRUD, user auth, form validation, styled with Tailwind CSS, and Prisma ORM with PostgreSQL."
+            technologies={["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"]}
+            imageUrl="/contact-app.svg?height=200&width=300"
+            demoUrl="#"
+            repoUrl="#"
+          />
+          <ProjectCard
+            title="ShellX (C)"
+            description="Unix-like shell supporting process management, pipelines, I/O redirection, built-in commands, signal handling, and optimized memory management."
+            technologies={["C", "Linux", "System Programming"]}
+            imageUrl="/public/full_colored_light.jpeg"
+            repoUrl="#"
+          />
+          <ProjectCard
+            title="IRC Server (C++)"
+            description="IRC server with real-time chat, user authentication, private messaging, channel management, and admin commands like /kick and /join."
+            technologies={["C++", "Networking", "Socket Programming"]}
+            imageUrl="/irc-server.svg?height=200&width=300"
+            // demoUrl="#"
+            repoUrl="https://github.com/M4HDIOUI/Internet_relay_chat-IRC-"
+          />
+          <ProjectCard
+            title="Dockmanager"
+            description="Docker Compose infrastructure managing NGINX, WordPress, and MariaDB with SSL, automated deployment, and service isolation for security."
+            technologies={["Docker", "NGINX", "WordPress", "MariaDB"]}
+            imageUrl="/dockmanager.svg?height=200&width=300"
+            // demoUrl="#"
+            repoUrl="https://github.com/M4HDIOUI/inception"
+          />
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className={styles.section}>
+          <h2 className={styles.sectionTitle}>Get In Touch</h2>
+          <div className={styles.contactGrid}>
+            <div className={styles.contactInfo}>
+              <p className={styles.paragraph}>
+                I'm currently open to new opportunities and collaborations. Feel free to reach out if you have a project
+                in mind or just want to connect!
+              </p>
+              <div className={styles.contactLinks}>
+                <div className={styles.contactLink}>
+                  <Mail className={styles.contactIcon} />
+                  <a href="mailto:mahdiouiomar@gmail.com">mahdiouiomar@gmail.com</a>
+                </div>
+                <div className={styles.contactLink}>
+                  <Linkedin className={styles.contactIcon} />
+                  <a href="https://www.linkedin.com/in/omar-mahdioui-03611a279/" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/omar-mahdioui-03611a279/
+                  </a>
+                </div>
+                <div className={styles.contactLink}>
+                  <Github className={styles.contactIcon} />
+                  <a href="https://github.com/M4HDIOUI" target="_blank" rel="noopener noreferrer">
+                    github.com/M4HDIOUI
+                  </a>
+                </div>
+              </div>
+            </div>
+            <form className={styles.contactForm}>
+              <div className={styles.formGrid}>
+                <div className={styles.formRow}>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="name" className={styles.formLabel}>
+                      Name
+                    </label>
+                    <input id="name" className={styles.formInput} placeholder="John Doe" />
+                  </div>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="email" className={styles.formLabel}>
+                      Email
+                    </label>
+                    <input id="email" type="email" className={styles.formInput} placeholder="hello@example.com" />
+                  </div>
+                </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="subject" className={styles.formLabel}>
+                    Subject
+                  </label>
+                  <input id="subject" className={styles.formInput} placeholder="Project Inquiry" />
+                </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="message" className={styles.formLabel}>
+                    Message
+                  </label>
+                  <textarea id="message" className={styles.formTextarea} placeholder="Your message here..." />
+                </div>
+              </div>
+              <button type="submit" className={`${styles.button} ${styles.primaryButton} ${styles.fullWidth}`}>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <p className={styles.footerText}>© {new Date().getFullYear()} omar mahdioui. All rights reserved.</p>
+          <div className={styles.footerSocial}>
+            <Link
+              href="https://github.com/M4HDIOUI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconLink}
+            >
+              <Github className={styles.icon} />
+              <span className={styles.srOnly}>GitHub</span>
+            </Link>
+            <Link
+              href="https://linkedin.com/in/omar-mahdioui-03611a279/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.iconLink}
+            >
+              <Linkedin className={styles.icon} />
+              <span className={styles.srOnly}>LinkedIn</span>
+            </Link>
+            <Link href="mailto:mahdiouiomar@gmail.com" className={styles.iconLink}>
+              <Mail className={styles.icon} />
+              <span className={styles.srOnly}>Email</span>
+            </Link>
+          </div>
+        </div>
       </footer>
     </div>
-  );
+  )
 }

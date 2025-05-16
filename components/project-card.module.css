@@ -1,0 +1,106 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .imageContainer {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover .image {
+    transform: scale(1.05);
+  }
+  
+  .header {
+    padding: 1.25rem 1.25rem 0.75rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    line-height: 1.5;
+  }
+  
+  .content {
+    padding: 0 1.25rem;
+    flex-grow: 1;
+  }
+  
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .tag:hover {
+    background-color: var(--muted);
+    border-color: var(--border-hover);
+  }
+  
+  .footer {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1.25rem;
+  }
+  
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--border);
+    background-color: transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--foreground);
+    transition: background-color 0.2s, border-color 0.2s;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background-color: var(--muted);
+    border-color: var(--border-hover);
+  }
+  
+  .buttonIcon {
+    width: 1rem;
+    height: 1rem;
+  }
+  

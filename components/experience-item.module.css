@@ -1,0 +1,83 @@
+.item {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border);
+  }
+  
+  .marker {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    left: -0.4375rem;
+    top: 0.375rem;
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .meta {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .meta {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  
+  .company {
+    font-size: 1.125rem;
+  }
+  
+  .separator {
+    display: none;
+    color: var(--muted-foreground);
+  }
+  
+  @media (min-width: 640px) {
+    .separator {
+      display: inline;
+    }
+  }
+  
+  .period {
+    color: var(--muted-foreground);
+  }
+  
+  .description {
+    color: var(--muted-foreground);
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+  
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  .tag:hover {
+    background-color: var(--muted);
+    border-color: var(--border-hover);
+  }
+  
