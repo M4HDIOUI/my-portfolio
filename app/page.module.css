@@ -114,6 +114,36 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    animation: heroFadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  
+  @keyframes heroFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(40px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .heroTitle, .heroSubtitle, .heroText, .buttonGroup {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroChildFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  
+  .heroTitle { animation-delay: 0.2s; }
+  .heroSubtitle { animation-delay: 0.4s; }
+  .heroText { animation-delay: 0.6s; }
+  .buttonGroup { animation-delay: 0.8s; }
+  
+  @keyframes heroChildFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   .profileImage {
@@ -222,17 +252,21 @@
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 2rem;
+    text-align: center;
   }
   
   .aboutGrid {
     display: grid;
     gap: 2rem;
+    justify-items: center;
   }
   
   @media (min-width: 768px) {
     .aboutGrid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
   }
   
@@ -240,6 +274,8 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
+    max-width: 600px;
   }
   
   .paragraph {
@@ -285,6 +321,8 @@
   .projectsGrid {
     display: grid;
     gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   @media (min-width: 768px) {
@@ -303,16 +341,21 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
   .contactGrid {
     display: grid;
     gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
   @media (min-width: 768px) {
     .contactGrid {
       grid-template-columns: 1fr 1fr;
+      max-width: 1000px;
     }
   }
   
@@ -321,6 +364,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
   }
   
   .contactLink {

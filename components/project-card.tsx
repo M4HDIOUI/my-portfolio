@@ -1,3 +1,5 @@
+"use client"
+
 import { Github, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import styles from "./project-card.module.css"

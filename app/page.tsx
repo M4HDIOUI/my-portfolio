@@ -24,9 +24,6 @@ export default function Home() {
             <Link href="#projects" className={styles.navLink}>
               Projects
             </Link>
-            <Link href="#experience" className={styles.navLink}>
-              Experience
-            </Link>
             <Link href="#contact" className={styles.navLink}>
               Contact
             </Link>
@@ -43,7 +40,7 @@ export default function Home() {
               <span className={styles.srOnly}>GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com/in/omar-mahdioui-03611a279/"
+              href="https://linkedin.com/in/omar-mahdioui/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.iconLink}
@@ -54,18 +51,14 @@ export default function Home() {
           </div>
         </div>
       </header>
-
       <main className={styles.main}>
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.profileImage}>
-            <img src="/placeholder.svg?height=128&width=128" alt="Profile" />
+            <img src="/1740968794658.jpg" alt="Mahdioui Omar Profile" />
           </div>
           <h1 className={styles.heroTitle}>Mahdioui Omar</h1>
           <h2 className={styles.heroSubtitle}>Software Engineer & Full-Stack Developer</h2>
-          <p className={styles.heroText}>
-          Full-stack developer with a strong foundation from 1337, skilled in React, Next.js, and Django. I build fast, accessible web apps and enjoy solving real-world problems with clean, scalable code.
-          </p>
           <div className={styles.buttonGroup}>
             <Link href="#contact" className={`${styles.button} ${styles.primaryButton}`}>
               Get in Touch
@@ -82,7 +75,7 @@ export default function Home() {
           <div className={styles.aboutGrid}>
             <div className={styles.aboutText}>
               <p className={styles.paragraph}>
-              I’m a developer trained at 1337, where I learned through real-world projects and peer-based challenges. This experience shaped my problem-solving mindset and adaptability.
+              I'm a developer trained at 1337, where I learned through real-world projects and peer-based challenges. This experience shaped my problem-solving mindset and adaptability.
               </p>
               <p className={styles.paragraph}>
               My focus is on building clean, reliable, and user-centered web applications. I value code quality, performance, and accessibility in everything I create.
@@ -90,9 +83,6 @@ export default function Home() {
               <p className={styles.paragraph}>
               I'm always exploring new technologies and enjoy turning ideas into practical digital solutions. I'm eager to join a team where I can grow, contribute, and build meaningful products.
               </p>
-            </div>
-            <div className={styles.aboutImage}>
-              <img src="/placeholder.svg?height=300&width=400" alt="About Me" />
             </div>
           </div>
         </section>
@@ -132,19 +122,19 @@ export default function Home() {
             repoUrl="https://github.com/USM4/ft_transcendence"
           />
           <ProjectCard
-            title="Contact App"
-            description="Next.js contact management app with CRUD, user auth, form validation, styled with Tailwind CSS, and Prisma ORM with PostgreSQL."
-            technologies={["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"]}
-            imageUrl="/contact-app.svg?height=200&width=300"
-            demoUrl="#"
+            title="ShellX"
+            description="Unix-like shell supporting process management, pipelines, I/O redirection, built-in commands, signal handling, and optimized memory management."
+            technologies={["C", "Linux", "System Programming"]}
+            imageUrl="/bash.png"
             repoUrl="#"
           />
           <ProjectCard
-            title="ShellX (C)"
-            description="Unix-like shell supporting process management, pipelines, I/O redirection, built-in commands, signal handling, and optimized memory management."
-            technologies={["C", "Linux", "System Programming"]}
-            imageUrl="/public/full_colored_light.jpeg"
-            repoUrl="#"
+            title="C++ journey"
+            description="Developed a series of progressively complex C++ projects applying object-oriented design, memory management, inheritance, polymorphism, and exception handling — including modules like class-based warlocks, fixed-point arithmetic, abstract interfaces, and polymorphic collections."
+            technologies={["C++"]}
+            imageUrl="/Cpp-logo.png"
+            // demoUrl="#"
+            repoUrl="https://github.com/M4HDIOUI/cpp"
           />
           <ProjectCard
             title="IRC Server (C++)"
@@ -158,7 +148,7 @@ export default function Home() {
             title="Dockmanager"
             description="Docker Compose infrastructure managing NGINX, WordPress, and MariaDB with SSL, automated deployment, and service isolation for security."
             technologies={["Docker", "NGINX", "WordPress", "MariaDB"]}
-            imageUrl="/dockmanager.svg?height=200&width=300"
+            imageUrl="/Docker.png"
             // demoUrl="#"
             repoUrl="https://github.com/M4HDIOUI/inception"
           />
@@ -181,8 +171,8 @@ export default function Home() {
                 </div>
                 <div className={styles.contactLink}>
                   <Linkedin className={styles.contactIcon} />
-                  <a href="https://www.linkedin.com/in/omar-mahdioui-03611a279/" target="_blank" rel="noopener noreferrer">
-                  linkedin.com/in/omar-mahdioui-03611a279/
+                  <a href="https://www.linkedin.com/in/omar-mahdioui/" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/omar-mahdioui/
                   </a>
                 </div>
                 <div className={styles.contactLink}>
@@ -232,7 +222,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <p className={styles.footerText}>© {new Date().getFullYear()} omar mahdioui. All rights reserved.</p>
+          <p className={styles.footerText}>© {new Date().getFullYear()} omar mahdioui.</p>
           <div className={styles.footerSocial}>
             <Link
               href="https://github.com/M4HDIOUI"
@@ -244,7 +234,7 @@ export default function Home() {
               <span className={styles.srOnly}>GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com/in/omar-mahdioui-03611a279/"
+              href="https://linkedin.com/in/omar-mahdioui/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.iconLink}

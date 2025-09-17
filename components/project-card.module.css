@@ -6,12 +6,21 @@
     overflow: hidden;
     border: 1px solid var(--border);
     background-color: var(--background);
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    perspective: 800px;
+    will-change: transform, box-shadow, border-image;
+    transform: rotateY(var(--tilt-x, 0deg)) rotateX(var(--tilt-y, 0deg));
   }
   
   .card:hover {
     border-color: var(--border-hover);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-image: linear-gradient(90deg, var(--primary), var(--primary-hover), var(--primary)) 1;
+    box-shadow: 0 8px 32px rgba(59,130,246,0.10), 0 1.5px 8px rgba(0,0,0,0.08);
+    transform: scale(1.03) rotateY(var(--tilt-x, 0deg)) rotateX(var(--tilt-y, 0deg));
+  }
+  
+  .card:active {
+    transform: scale(0.98) rotateY(var(--tilt-x, 0deg)) rotateX(var(--tilt-y, 0deg));
   }
   
   .imageContainer {
@@ -102,5 +111,20 @@
   .buttonIcon {
     width: 1rem;
     height: 1rem;
+  }
+  
+  .card.no-tilt,
+  .no-tilt {
+    transform: none !important;
+    border-image: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+  
+  .card[data-tilt="false"] {
+    transform: none !important;
+    border-image: none !important;
+    box-shadow: none !important;
+    transition: none !important;
   }
   
