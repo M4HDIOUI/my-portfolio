@@ -75,13 +75,13 @@ export default function Home() {
           <div className={styles.aboutGrid}>
             <div className={styles.aboutText}>
               <p className={styles.paragraph}>
-                I'm a developer trained at 1337, where I learned through real-world projects and peer-based challenges. This experience shaped my problem-solving mindset and adaptability.
+                I&apos;m a developer trained at 1337, where I learned through real-world projects and peer-based challenges. This experience shaped my problem-solving mindset and adaptability.
               </p>
               <p className={styles.paragraph}>
                 My focus is on building clean, reliable, and user-centered web applications. I value code quality, performance, and accessibility in everything I create.
               </p>
               <p className={styles.paragraph}>
-                I'm always exploring new technologies and enjoy turning ideas into practical digital solutions. I'm eager to join a team where I can grow, contribute, and build meaningful products.
+                I&apos;m always exploring new technologies and enjoy turning ideas into practical digital solutions. I&apos;m eager to join a team where I can grow, contribute, and build meaningful products.
               </p>
             </div>
           </div>
