@@ -2,9 +2,9 @@ import Link from "next/link"
 import { Github, Linkedin, Mail } from "lucide-react"
 import ProjectCard from "@/components/project-card"
 import SkillBadge from "@/components/skill-badge"
-import ExperienceItem from "@/components/experience-item"
 import { ThemeToggle } from "@/components/theme-toggle"
 import styles from "./page.module.css"
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -55,7 +55,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.profileImage}>
-            <img src="/1740968794658.jpg" alt="Mahdioui Omar Profile" />
+            <Image src="/1740968794658.jpg" alt="Mahdioui Omar Profile" width={300} height={300} />
           </div>
           <h1 className={styles.heroTitle}>Mahdioui Omar</h1>
           <h2 className={styles.heroSubtitle}>Software Engineer & Full-Stack Developer</h2>
@@ -75,13 +75,13 @@ export default function Home() {
           <div className={styles.aboutGrid}>
             <div className={styles.aboutText}>
               <p className={styles.paragraph}>
-              I'm a developer trained at 1337, where I learned through real-world projects and peer-based challenges. This experience shaped my problem-solving mindset and adaptability.
+                I'm a developer trained at 1337, where I learned through real-world projects and peer-based challenges. This experience shaped my problem-solving mindset and adaptability.
               </p>
               <p className={styles.paragraph}>
-              My focus is on building clean, reliable, and user-centered web applications. I value code quality, performance, and accessibility in everything I create.
+                My focus is on building clean, reliable, and user-centered web applications. I value code quality, performance, and accessibility in everything I create.
               </p>
               <p className={styles.paragraph}>
-              I'm always exploring new technologies and enjoy turning ideas into practical digital solutions. I'm eager to join a team where I can grow, contribute, and build meaningful products.
+                I'm always exploring new technologies and enjoy turning ideas into practical digital solutions. I'm eager to join a team where I can grow, contribute, and build meaningful products.
               </p>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
             title="Online Pong Game"
             description="Full-stack pong game built with React frontend and Django backend. Features user authentication, chat, and real-time notifications."
             technologies={["React", "Django", "WebSocket", "JWT"]}
-            imageUrl="/pong-game.svg?height=200&width=300"
+            imageUrl="/pong-game-card.png"
             repoUrl="https://github.com/USM4/ft_transcendence"
           />
           <ProjectCard
@@ -139,8 +139,8 @@ export default function Home() {
           <ProjectCard
             title="IRC Server (C++)"
             description="IRC server with real-time chat, user authentication, private messaging, channel management, and admin commands like /kick and /join."
-            technologies={["C++", "Networking", "Socket Programming"]}
-            imageUrl="/irc-server.svg?height=200&width=300"
+            technologies={["C++", "Socket Programming"]}
+            imageUrl="/irc-chat-server.jpg"
             // demoUrl="#"
             repoUrl="https://github.com/M4HDIOUI/Internet_relay_chat-IRC-"
           />
@@ -222,7 +222,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
-          <p className={styles.footerText}>© {new Date().getFullYear()} omar mahdioui.</p>
+          <p className={styles.footerText}>© {new Date().getFullYear()} omar mahdioui. All rights reserved.</p>
           <div className={styles.footerSocial}>
             <Link
               href="https://github.com/M4HDIOUI"
