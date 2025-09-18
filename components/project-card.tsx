@@ -3,6 +3,7 @@
 import { Github, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import styles from "./project-card.module.css"
+import Image from "next/image";
 
 interface ProjectCardProps {
   title: string
@@ -24,7 +25,7 @@ export default function ProjectCard({
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <img src={imageUrl} alt={title} className={styles.image} />
+        <Image src={imageUrl} alt={title} className={styles.image} width={300} height={300} />
       </div>
       <div className={styles.header}>
         <h3 className={styles.title}>{title}</h3>
